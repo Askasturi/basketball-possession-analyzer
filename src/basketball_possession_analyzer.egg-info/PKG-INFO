@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: basketball-possession-analyzer
+Version: 0.1.0
+Summary: Basketball possession analyzer for detection, tracking, identity resolution, homography, shot detection, and annotated rendering.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python>=4.10
+Requires-Dist: numpy>=2.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+
+# Basketball Possession Analyzer
+
+A from-scratch basketball possession analysis project inspired by Roboflow-style basketball video analytics.
+
+## Goal
+
+The final system will:
+
+1. Load basketball video clips.
+2. Detect players, ball, rim, and jersey numbers.
+3. Track players across frames.
+4. Identify teams.
+5. Read jersey numbers.
+6. Match jersey numbers to tracked players.
+7. Map players to a top-down court using homography.
+8. Detect shot attempts.
+9. Classify make/miss.
+10. Render an annotated output video.
+
+## Tech Stack
+
+- Python 3.12
+- OpenCV
+- NumPy
+- Pytest
+- Ruff
+
+Future optional adapters may support:
+
+- RF-DETR
+- SAM2
+- SigLIP
+- UMAP
+- K-means
+- SmolVLM2
+
+Heavy ML models are optional adapters and are not required for basic tests.
+
+## Setup
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -e ".[dev]"
+```
