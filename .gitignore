@@ -14,12 +14,12 @@ data/*
 !data/.gitkeep
 !data/clips/
 !data/clips/.gitkeep
+!data/clips/*.mp4
 
 outputs/*
 !outputs/.gitkeep
 
 models/
-*.mp4
 *.mov
 *.avi
 *.mkv
